@@ -1,65 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Union | Marriage Celebration</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <title>The Royal Wedding | Ravi Weds Anjali</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --royal-gold: #C5A021;
+            --deep-maroon: #630d0d;
+            --cream: #fffaf0;
+            --text-gray: #4a4a4a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Serif Devanagari', serif;
+            background-color: var(--cream);
+            color: var(--text-gray);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p { font-size: 1.5rem; letter-spacing: 5px; text-transform: uppercase; }
+
+        /* --- COUNTDOWN --- */
+        .countdown-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .time-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+            min-width: 90px;
+        }
+        .time-box span { font-size: 2rem; font-weight: bold; display: block; }
+
+        /* --- SECTIONS --- */
+        section { padding: 100px 10% ; text-align: center; }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--deep-maroon);
+            margin-bottom: 50px;
+        }
+        .section-title::after {
+            content: "❦";
+            display: block;
+            font-size: 1.5rem;
+            color: var(--royal-gold);
+            margin-top: 10px;
+        }
+
+        /* --- STORY TIMELINE --- */
+        .story-container {
+            max-width: 800px;
+            margin: auto;
+            border-left: 2px dashed var(--royal-gold);
+            padding-left: 40px;
+            text-align: left;
+        }
+        .story-item { margin-bottom: 60px; position: relative; }
+        .story-item::before {
+            content: "❤";
+            position: absolute;
+            left: -53px;
+            top: 0;
+            background: var(--cream);
+            color: var(--deep-maroon);
+            padding: 5px;
+            font-size: 1.2rem;
+        }
+
+        /* --- FAMILY SECTION --- */
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .family-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--royal-gold);
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        /* --- EVENTS (LONG LIST) --- */
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .event-row {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
+        }
+        .event-row:hover { transform: scale(1.02); }
+        .event-img { width: 40%; height: 250px; background: #ddd; }
+        .event-info { padding: 30px; text-align: left; width: 60%; }
+        .event-info h3 { color: var(--deep-maroon); margin-bottom: 10px; }
+
+        /* --- FORM & MAP --- */
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .form-side, .map-side { flex: 1; min-width: 300px; }
+        input, select, textarea {
+            width: 100%; padding: 15px; margin-bottom: 15px;
+            border: 1px solid #ddd; border-radius: 5px;
+        }
+        .btn-submit {
+            background: var(--deep-maroon); color: white;
+            border: none; padding: 15px 40px; font-size: 1.1rem;
+            cursor: pointer; border-radius: 5px; width: 100%;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .event-row { flex-direction: column; }
+            .event-img, .event-info { width: 100%; }
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
 </head>
 <body>
 
     <header class="hero">
-        <div class="hero-content">
-            <h1>Sheetal & Shivam</h1>
-            <p>Are getting married</p>
-            <div class="date">DECEMBER 12, 2026</div>
+        <p>मंगलम भगवान विष्णु:</p>
+        <h1>रवि और अंजलि</h1>
+        <p>12 दिसंबर, 2026 • उज्जैन</p>
+        
+        <div class="countdown-container">
+            <div class="time-box"><span id="days">00</span>दिन</div>
+            <div class="time-box"><span id="hours">00</span>घंटे</div>
+            <div class="time-box"><span id="mins">00</span>मिनट</div>
         </div>
     </header>
 
-    <section class="story">
-        <h2 class="section-title">Our Story</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>The First Meet</h3>
-                <p>It started with a simple coffee and a long conversation in Ujjain...</p>
+    <section>
+        <h2 class="section-title">स्वागतम</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: auto;">
+            "प्रेम एक पवित्र बंधन है जो दो आत्माओं को एक करता है।" <br>
+            हम आपको अपने जीवन के इस सबसे खूबसूरत अध्याय की शुरुआत में आमंत्रित करते हैं। 
+            आपका आशीर्वाद हमारे लिए अनमोल है।
+        </p>
+    </section>
+
+    <section style="background-color: #fff;">
+        <h2 class="section-title">हमारी कहानी</h2>
+        <div class="story-container">
+            <div class="story-item">
+                <h3>पहली मुलाकात (2022)</h3>
+                <p>कॉलेज के गलियारों से शुरू हुई यह दोस्ती, धीरे-धीरे एक अटूट विश्वास में बदल गई। उज्जain के महाकाल मंदिर की शांति में हमने साथ चलने का वादा किया।</p>
             </div>
-            <div class="timeline-item">
-                <h3>The Proposal</h3>
-                <p>Under the stars, where everything felt just right.</p>
+            <div class="story-item">
+                <h3>बात आगे बढ़ी</h3>
+                <p>हज़ारों कॉल, ढेरों मैसेज और परिवार की रजामंदी। हमने महसूस किया कि हम एक-दूसरे के बिना अधूरे हैं।</p>
+            </div>
+            <div class="story-item">
+                <h3>हमसफर बनने का सफर</h3>
+                <p>आज हम यहाँ हैं, अपनी यादों को हकीकत में बदलने के लिए।</p>
             </div>
         </div>
     </section>
 
-    <section class="events">
-        <h2 class="section-title">The Wedding Events</h2>
-        <div class="event-grid">
-            <div class="card">
-                <h3>Haldi</h3>
-                <p>10:00 AM | Tanodiya</p>
-                <button class="btn">View Map</button>
+    <section>
+        <h2 class="section-title">परिवार के सदस्य</h2>
+        <div class="family-grid">
+            <div class="family-card">
+                <img src="https://via.placeholder.com/150" alt="Father">
+                <h4>श्री रामेश्वर जी</h4>
+                <p>(पिताजी)</p>
             </div>
-            <div class="card">
-                <h3>Wedding Ceremony</h3>
-                <p>07:00 PM | Grand Palace</p>
-                <button class="btn">View Map</button>
+            <div class="family-card">
+                <img src="https://via.placeholder.com/150" alt="Mother">
+                <h4>श्रीमती सुशीला देवी</h4>
+                <p>(माताजी)</p>
+            </div>
+            <div class="family-card">
+                <img src="https://via.placeholder.com/150" alt="Friend">
+                <h4>पंडित हर्ष शर्मा</h4>
+                <p>(खास मित्र)</p>
             </div>
         </div>
     </section>
 
-    <section class="rsvp">
-        <div class="rsvp-container">
-            <h2>Will You Attend?</h2>
-            <form id="rsvp-form">
-                <input type="text" placeholder="Your Name" required>
-                <select>
-                    <option>Coming alone</option>
-                    <option>Coming with Family</option>
-                </select>
-                <button type="submit" class="btn-submit">Confirm Presence</button>
-            </form>
+    <section style="background-color: #fcf4f4;">
+        <h2 class="section-title">कार्यक्रम विवरण</h2>
+        <div class="event-list">
+            
+            <div class="event-row">
+                <div class="event-img" style="background: url('https://images.unsplash.com/photo-1595191151601-246acc4467ec?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                <div class="event-info">
+                    <h3>हल्दी की रस्म</h3>
+                    <p>📅 10 दिसंबर | ⏰ सुबह 10:00 बजे</p>
+                    <p>📍 लेकोडा अंजाना, जिला उज्जैन</p>
+                    <p>रंगों और मस्ती से भरा सुबह का कार्यक्रम जहाँ हम पीले रंग में रंग जाएंगे।</p>
+                </div>
+            </div>
+
+            <div class="event-row">
+                <div class="event-img" style="background: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                <div class="event-info">
+                    <h3>संगीत और डिनर</h3>
+                    <p>📅 11 दिसंबर | ⏰ शाम 07:00 बजे</p>
+                    <p>📍 रॉयल पैलेस गार्डन</p>
+                    <p>नाच-गाना और लजीज पकवानों के साथ एक यादगार शाम।</p>
+                </div>
+            </div>
+
+            <div class="event-row">
+                <div class="event-img" style="background: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
+                <div class="event-info">
+                    <h3>पाणिग्रहण संस्कार (शादी)</h3>
+                    <p>📅 12 दिसंबर | ⏰ रात 08:00 बजे</p>
+                    <p>📍 मंगल वाटिका, उज्जैन</p>
+                    <p>सात फेरे और सात जन्मों का साथ। आपकी उपस्थिति प्रार्थनीय है।</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <section>
+        <h2 class="section-title">अपनी उपस्थिति दर्ज करें</h2>
+        <div class="contact-flex">
+            <div class="form-side">
+                <form id="rsvpForm">
+                    <input type="text" placeholder="आपका पूरा नाम" required>
+                    <input type="number" placeholder="कितने लोग आएँगे?" required>
+                    <select>
+                        <option value="Vegetarian">शाकाहारी भोजन</option>
+                        <option value="Non-Veg">कोई अन्य प्राथमिकता</option>
+                    </select>
+                    <textarea rows="4" placeholder="दूल्हा-दुल्हन के लिए कोई संदेश..."></textarea>
+                    <button type="submit" class="btn-submit">RSVP भेजें</button>
+                </form>
+            </div>
+            <div class="map-side">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.325519253488!2d75.7600!3d23.1800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963740000000001%3A0x0!2zMjPCsDEwJzQ4LjAiTiA3NcKwNDUnMzYuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 50px; background: var(--deep-maroon); color: white; text-align: center;">
+        <p>Created with Love by <strong>Ravi Anjana</strong></p>
+        <p style="margin-top: 10px; opacity: 0.7;">© 2026 Wedding Invitation</p>
+    </footer>
+
+    <script>
+        // Countdown Logic
+        const targetDate = new Date("Dec 12, 2026 20:00:00").getTime();
+
+        setInterval(function() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerText = d;
+            document.getElementById("hours").innerText = h;
+            document.getElementById("mins").innerText = m;
+        }, 1000);
+
+        document.getElementById('rsvpForm').onsubmit = (e) => {
+            e.preventDefault();
+            alert("आपका संदेश हमें मिल गया है, धन्यवाद!");
+        };
+    </script>
 </body>
 </html>
