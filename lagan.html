@@ -1,11 +1,199 @@
-.vachan-card {
-    background: #fff;
-    border: 2px solid #8b0000;
-    padding: 30px;
-    border-radius: 20px;
-    height: 100%;
-    transition: 0.3s;
-}
-.vachan-card:hover { transform: rotate(2deg); background: #8b0000; color: gold; }
-.gita-quote { font-size: 0.9rem; font-style: italic; color: #555; }
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शुभ लग्न एवं सात वचन | राहुल एवं अंजली</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <style>
+        :root {
+            --fire-orange: #FF4500;
+            --sacred-red: #8B0000;
+            --gold: #D4AF37;
+            --sand-bg: #FFFBF0;
+        }
+
+        body {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            background-color: var(--sand-bg);
+            color: #2c2c2c;
+            overflow-x: hidden;
+        }
+
+        /* --- Header Section --- */
+        .lagan-header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 10px solid var(--sacred-red);
+        }
+
+        .lagan-header h1 {
+            font-family: 'Rozha One', serif;
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            color: var(--gold);
+        }
+
+        /* --- Vachan Card Grid --- */
+        .vachan-section { padding: 80px 0; }
+        
+        .vachan-card {
+            background: white;
+            border: 2px solid var(--gold);
+            border-radius: 25px;
+            padding: 35px;
+            height: 100%;
+            transition: 0.5s;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .vachan-card:hover {
+            transform: translateY(-15px) rotate(1deg);
+            background: var(--sacred-red);
+            color: white;
+            border-color: white;
+        }
+
+        .vachan-card:hover .gita-text { color: #ffe0b2; }
+        .vachan-card:hover .vachan-num { color: rgba(255,255,255,0.2); }
+
+        .vachan-num {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            color: rgba(212, 175, 55, 0.1);
+        }
+
+        .gita-text {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--sacred-red);
+            border-top: 1px solid #eee;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+
+        /* --- Back Button --- */
+        .back-nav {
+            position: fixed; top: 20px; left: 20px; z-index: 100;
+            background: var(--sacred-red); color: white;
+            padding: 8px 25px; border-radius: 50px; text-decoration: none;
+        }
+
+        .vows-intro {
+            max-width: 800px; margin: 0 auto 60px auto; text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-nav">← Home</a>
+
+    <header class="lagan-header" data-aos="zoom-out">
+        <div>
+            <h1>पाणिग्रहण संस्कार</h1>
+            <p class="lead text-white" style="letter-spacing: 5px;">अटूट बंधन के सात वचन</p>
+        </div>
+    </header>
+
+    <div class="container vachan-section">
+        <div class="vows-intro" data-aos="fade-up">
+            <h2 style="font-family: 'Rozha One'; color: var(--sacred-red);">अग्नि के साक्ष्य में संकल्प</h2>
+            <p>पाणिग्रहण का अर्थ है - 'हाथ थामना'। जब अग्नि के चारों ओर सात फेरे लिए जाते हैं, तो हर फेरा जीवन के एक नए कर्तव्य की याद दिलाता है।</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="vachan-card">
+                    <div class="vachan-num">01</div>
+                    <h4>प्रथम वचन: अन्न-व्यवस्था</h4>
+                    <p>हम मिलकर घर में अन्न और धन की वृद्धि करेंगे और परिवार का उचित पोषण करेंगे।</p>
+                    <p class="gita-text">"अन्नाद्भवन्ति भूतानि" - सभी प्राणियों का आधार अन्न है, हम इसे सेवा मानकर संचय करेंगे।</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="vachan-card">
+                    <div class="vachan-num">02</div>
+                    <h4>द्वितीय वचन: शक्ति और स्वास्थ्य</h4>
+                    <p>हम एक-दूसरे के शारीरिक और मानसिक स्वास्थ्य के रक्षक बनेंगे और संकट में ढाल बनेंगे।</p>
+                    <p class="gita-text">एक-दूसरे की शक्ति बनकर ही हम जीवन के युद्ध को जीत सकते हैं।</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="vachan-card">
+                    <div class="vachan-num">03</div>
+                    <h4>तृतीय वचन: धर्म-पालन</h4>
+                    <p>हम मिलकर सभी आध्यात्मिक और धार्मिक कर्तव्यों का पालन करेंगे।</p>
+                    <p class="gita-text">"स्वधर्मे निधनं श्रेयः" - अपने कर्तव्यों का मिलकर पालन करना ही परम धर्म है।</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="vachan-card">
+                    <div class="vachan-num">04</div>
+                    <h4>चतुर्थ वचन: सुख-शांति</h4>
+                    <p>हम परिवार में प्रेम, विश्वास और शांति बनाए रखने के लिए समर्पित रहेंगे।</p>
+                    <p class="gita-text">जीवन का असली फल 'शांति' है, जो केवल आपसी विश्वास से मिलती है।</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="vachan-card">
+                    <div class="vachan-num">05</div>
+                    <h4>पंचम वचन: प्रजा-पालन</h4>
+                    <p>हम आने वाली पीढ़ियों को सुसंस्कारित बनाएंगे और समाज के प्रति उत्तरदायी होंगे।</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="vachan-card">
+                    <div class="vachan-num">06</div>
+                    <h4>षष्ठ वचन: ऋतु-सहयोग</h4>
+                    <p>हर मौसम और जीवन की हर परिस्थिति (सुख या दुःख) में हम एक-दूसरे का साथ नहीं छोड़ेंगे।</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mx-auto" data-aos="fade-up" data-aos-delay="600">
+                <div class="vachan-card" style="border-width: 4px; border-style: double;">
+                    <div class="vachan-num">07</div>
+                    <h4>सप्तम वचन: सखा (मैत्री)</h4>
+                    <p>अंतिम वचन: "सखा सप्तपदा भव" - हम जीवन भर एक-दूसरे के सबसे अच्छे मित्र रहेंगे।</p>
+                    <p class="gita-text">जहाँ मैत्री है, वहीं ईश्वर का वास है।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <h3 class="text-center mb-4" style="font-family: 'Rozha One'; color: var(--sacred-red);">अग्नि के फेरे (The Holy Ritual)</h3>
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg border border-5 border-white">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Lagan Ceremony Video" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer class="text-center py-5" style="color: var(--sacred-red);">
+        <p>॥ यत्र नार्यस्तु पूज्यन्ते रमन्ते तत्र देवता: ॥</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
