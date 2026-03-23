@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शाही प्रतिभोज | राहुल एवं अंजली</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --royal-purple: #4B0082;
+            --gold-leaf: #D4AF37;
+            --silk-white: #F9F9F9;
+            --maroon-dark: #800000;
+        }
+
+        body {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            background-color: var(--silk-white);
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        /* --- Header Styling --- */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-leaf);
+            border-bottom: 10px double var(--gold-leaf);
+        }
+
+        .page-header h1 {
+            font-family: 'Rozha One', serif;
+            font-size: clamp(3rem, 10vw, 5rem);
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+        }
+
+        /* --- Content Layout --- */
+        .venue-card {
+            background: white;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .menu-grid {
+            background: #fff8f0;
+            border: 2px solid var(--gold-leaf);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .menu-item {
+            border-bottom: 1px dashed var(--gold-leaf);
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .back-nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: var(--maroon-dark);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .back-nav:hover { background: #000; color: var(--gold-leaf); }
+
+        .location-box {
+            background: var(--maroon-dark);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-nav">← मुख्य पृष्ठ</a>
+
+    <div class="page-header" data-aos="fade-down">
+        <div class="text-center">
+            <h1>शाही प्रतिभोज</h1>
+            <p class="lead" style="font-family: 'Montserrat'; letter-spacing: 5px;">A GRAND FEAST OF LOVE</p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="venue-card" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2 style="font-family: 'Rozha One'; color: var(--maroon-dark);">अतिथि देवो भव:</h2>
+                    <p class="lead">हमारे इस मांगलिक उत्सव में आपका आगमन ही सबसे बड़ा उपहार है। प्रतिभोज की इस बेला में हमने आपके स्वाद और स्वास्थ्य का पूर्ण ध्यान रखते हुए पारंपरिक व्यंजनों का चयन किया है।</p>
+                    
+                    <p>उज्जैन की धरती के अनूठे स्वाद और मालवा की प्रसिद्ध मेहमान नवाजी के साथ, यह शाम यादों के नाम होगी। शशुद्ध घी से निर्मित व्यंजनों और प्रेम की चाशनी में डूबी मिठाइयों के साथ हम आपका स्वागत करते हैं।</p>
+
+                    <div class="location-box" data-aos="zoom-in">
+                        <h4>📍 आयोजन स्थल (Venue)</h4>
+                        <p class="mb-0">ग्राम: बजरंगखेड़ी, तहसील एवं जिला उज्जैन (म.प्र.)</p>
+                        <p class="small text-white-50 mt-2">सूचना: मेहमानों की सुविधा के लिए गाड़ी शाम 4 बजे प्रस्थान करेगी।</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-5 mt-4 mt-md-0">
+                    <div class="menu-grid" data-aos="fade-left">
+                        <h4 class="text-center mb-4" style="color: var(--maroon-dark);">🍽️ खास व्यंजन (Must Try)</h4>
+                        <div class="menu-item"><span>शाही मालपुआ & रबड़ी</span> <span>✨</span></div>
+                        <div class="menu-item"><span>दाल बाटी चूरमा (मालवी तड़का)</span> <span>✨</span></div>
+                        <div class="menu-item"><span>कड़ाही पनीर & नान</span> <span>✨</span></div>
+                        <div class="menu-item"><span>केसरिया रसमलाई</span> <span>✨</span></div>
+                        <div class="menu-item"><span>गरमा-गरम मूंग दाल हलवा</span> <span>✨</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-circle mb-3 border border-5 border-white shadow-sm" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h6>शुद्ध एवं सात्विक</h6>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1505275350441-83dcda8eeef5?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-circle mb-3 border border-5 border-white shadow-sm" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h6>शाही साज-सज्जा</h6>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-circle mb-3 border border-5 border-white shadow-sm" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h6>स्नेह मिलन</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5" data-aos="fade-up">
+        <h3 class="text-center mb-4" style="font-family: 'Rozha One'; color: var(--maroon-dark);">स्वाद की एक झलक</h3>
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Catering Video" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer class="text-center py-5">
+        <p style="color: var(--maroon-dark);">॥ तृप्ति का स्वाद, अपनों का आशीर्वाद ॥</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
+
