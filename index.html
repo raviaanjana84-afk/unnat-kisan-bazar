@@ -3,223 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivah Sagar | Ek Shubh Aarambh</title>
+    <title>Mangalotsav | Rahul & Anjali</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Rozha+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root {
-            --royal-red: #A52A2A;
-            --deep-gold: #B8860B;
-            --haldi-yellow: #FFD700;
-            --mehendi-green: #228B22;
-            --silk-cream: #FFF5EE;
+            --royal-maroon: #800000;
+            --golden-glow: #D4AF37;
+            --soft-cream: #FFFAF0;
+            --modern-black: #1a1a1a;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--silk-cream);
-            color: #2c2c2c;
-            line-height: 1.8;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            background-color: var(--soft-cream);
+            color: var(--modern-black);
+            overflow-x: hidden;
         }
 
-        /* Hero Section */
-        .hero-section {
+        /* --- Floating Navigation --- */
+        .nav-custom {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--golden-glow);
+        }
+
+        /* --- Hero Section: Modern & Clean --- */
+        .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1500&q=80');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            border-bottom: 8px double var(--deep-gold);
+            clip-path: ellipse(150% 100% at 50% 0%);
         }
 
-        .hero-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 5.5rem;
-            color: var(--deep-gold);
-        }
-
-        /* Section Styling */
-        .rasm-header {
+        .hero-box h1 {
             font-family: 'Rozha One', serif;
-            color: var(--royal-red);
-            text-align: center;
-            font-size: 3rem;
-            margin-top: 50px;
+            font-size: 5rem;
+            margin-bottom: 10px;
+            color: var(--golden-glow);
         }
 
-        .sub-text {
-            text-align: center;
-            font-style: italic;
-            color: #555;
-            margin-bottom: 40px;
-        }
-
-        /* Event Cards with Deep Info */
-        .rasm-card {
+        /* --- Shagun Schedule (Card Style) --- */
+        .shagun-card {
             background: white;
+            border: 1px solid #eee;
             border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-            border-left: 5px solid var(--deep-gold);
-        }
-
-        .rasm-info { padding: 30px; }
-        
-        .rasm-title {
-            font-family: 'Rozha One', serif;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .highlight-box {
-            background: #fdf2f2;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            border-left: 3px solid var(--royal-red);
-            margin-top: 15px;
-        }
-
-        /* Vachan Interactive Section */
-        .vachan-wrapper {
-            background: var(--royal-red);
-            color: white;
-            padding: 60px 0;
-            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
-        }
-
-        .vachan-item {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border: 1px solid var(--deep-gold);
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 30px;
+            text-align: center;
             transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
         }
 
-        .vachan-item:hover {
-            background: var(--deep-gold);
-            color: black;
+        .shagun-card:hover {
+            border-color: var(--golden-glow);
+            transform: translateY(-10px);
+        }
+
+        .date-badge {
+            background: var(--royal-maroon);
+            color: white;
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* --- Deep Detail Sections --- */
+        .detail-section {
+            padding: 80px 0;
+        }
+
+        .img-rounded {
+            border-radius: 30px;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* --- Vachan Grid: Modern UI --- */
+        .vachan-container {
+            background: var(--royal-maroon);
+            padding: 60px 20px;
+            border-radius: 40px;
+            color: white;
+        }
+
+        .vachan-pill {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--golden-glow);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* --- Family Tree / Relatives Section --- */
+        .family-grid {
+            background: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.02);
+        }
+
+        .family-title {
+            color: var(--royal-maroon);
+            border-bottom: 2px solid var(--golden-glow);
+            display: inline-block;
+            margin-bottom: 25px;
         }
 
         footer {
-            background: #111;
-            color: var(--deep-gold);
-            padding: 40px;
+            background: var(--modern-black);
+            color: #888;
+            padding: 50px 0;
             text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <section class="hero-section">
-        <div data-aos="zoom-out" data-aos-duration="2500">
-            <h1 class="hero-title">शुभ विवाह</h1>
-            <h2 style="font-family: 'Cinzel';">बुलबुल संग अमित </h2>
-            <p>मंगलम भगवान विष्णु, मंगलम पुण्डरीकाक्षः...</p>
+    <section class="hero">
+        <div class="hero-box" data-aos="zoom-in">
+            <p style="letter-spacing: 5px; font-family: 'Montserrat';">INVITATION TO CELEBRATE</p>
+            <h1>राहुल <span>&</span> अंजली</h1>
+            <p>|| मंगलम् वैकुण्ठ: ||</p>
         </div>
     </section>
 
-    <div class="container">
-        <h2 class="rasm-header">विवाह की रस्में (The Rituals)</h2>
-        <p class="sub-text">"परम्पराओं का संगम, खुशियों का उत्सव"</p>
-
-        <div class="row">
-            <div class="col-md-12" data-aos="fade-up">
-                <div class="rasm-card">
-                    <div class="row g-0">
-                        <div class="col-md-4" style="background: url('https://images.unsplash.com/photo-1567591974574-e8627d70e28a?auto=format&fit=crop&w=500&q=80') center/cover;"></div>
-                        <div class="col-md-8 rasm-info">
-                            <h3 class="rasm-title" style="color: #ff4500;">🕉️ श्री गणेश स्थापना</h3>
-                            <p>विवाह का निर्विघ्न समापन हो, इसलिए सबसे पहले प्रथम पूज्य भगवान गणेश को आमंत्रित किया गया। कुलदेवता की पूजा के साथ घर में खुशियों का आगमन हुआ।</p>
-                            <div class="highlight-box">
-                                <strong>महत्व:</strong> यह रस्म सकारात्मक ऊर्जा का प्रतीक है। इसमें 'मंगलाष्टक' का पाठ किया गया और पूरे परिवार ने सुख-समृद्धि की प्रार्थना की।
-                            </div>
-                        </div>
-                    </div>
+    <section class="container detail-section">
+        <h2 class="text-center mb-5" style="font-family: 'Rozha One'; color: var(--royal-maroon);">✨ शुभ मांगलिक कार्यक्रम ✨</h2>
+        <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="shagun-card">
+                    <div class="date-badge">14 FEB 2026</div>
+                    <h4>श्री गणेश पूजन</h4>
+                    <p class="text-muted">फाल्गुन सुदी दशमी</p>
+                    <hr>
+                    <p class="small">प्रथम पूज्य की आराधना के साथ मंगल उत्सव की शुरुआत।</p>
                 </div>
             </div>
-
-            <div class="col-md-6" data-aos="fade-right">
-                <div class="rasm-card">
-                    <div class="rasm-info">
-                        <h3 class="rasm-title" style="color: var(--haldi-yellow);">💛 हल्दी की रस्म (उबटन)</h3>
-                        <p>हल्दी का पीला रंग नई शुरुआत और पवित्रता का प्रतीक है। दूल्हा और दुल्हन को उनके परिवार वालों ने प्यार और आशीर्वाद के साथ हल्दी लगाई।</p>
-                        <p><strong>Deep Detail:</strong> इस रस्म में 'तेल-बाण' का विशेष महत्व था, जहाँ घर की औरतों ने पारंपरिक गीत गाकर माहौल को भक्तिमय बना दिया।</p>
-                    </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="shagun-card">
+                    <div class="date-badge">17 FEB 2026</div>
+                    <h4>हल्दी & मण्डप</h4>
+                    <p class="text-muted">फाल्गुन सुदी द्वादशी</p>
+                    <hr>
+                    <p class="small">पीले रंग की खुशबू और परिवार का स्नेहिल आशीर्वाद।</p>
                 </div>
             </div>
-
-            <div class="col-md-6" data-aos="fade-left">
-                <div class="rasm-card">
-                    <div class="rasm-info">
-                        <h3 class="rasm-title" style="color: var(--mehendi-green);">💚 मेहंदी का उत्सव</h3>
-                        <p>कहते हैं मेहंदी का रंग जितना गहरा होता है, प्यार उतना ही अटूट होता है। दुल्हन की हथेलियों पर पिया का नाम सजा और ढोल की थाप पर सब झूमे।</p>
-                        <p><strong>Deep Detail:</strong> राजस्थानी और अरबी डिज़ाइन के बीच, मेहंदी के बारीक काम में दूल्हे का नाम छुपाना सबसे रोमांचक पल था।</p>
-                    </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="shagun-card">
+                    <div class="date-badge">19 FEB 2026</div>
+                    <h4>पाणिग्रहण संस्कार</h4>
+                    <p class="text-muted">गुरुवार, शुभ लग्न</p>
+                    <hr>
+                    <p class="small">दो आत्माओं का पवित्र मिलन और सात फेरों का संकल्प।</p>
                 </div>
             </div>
-
-            <div class="col-md-12" data-aos="zoom-in">
-                <div class="rasm-card">
-                    <div class="rasm-info text-center">
-                        <h3 class="rasm-title" style="color: #9370DB;">🎵 संगीत की शाम (Sangeet Night)</h3>
-                        <p>यह रात थी मस्ती, नाच-गाने और परिवार के बीच की खट्टी-मीठी नोक-झोंक की। दादी-नानी के पारंपरिक गीतों से लेकर आज के बॉलीवुड गानों तक, हर किसी ने अपनी प्रस्तुति दी।</p>
-                        <div class="row text-start mt-4">
-                            <div class="col-md-4"><b>विशेष आकर्षण:</b> दूल्हा-दुल्हन का स्लो-डांस।</div>
-                            <div class="col-md-4"><b>थीम:</b> शाही राजपूताना ड्रेस कोड।</div>
-                            <div class="col-md-4"><b>DJs:</b> उज्जैन के मशहूर कलाकार।</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="vachan-wrapper section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5" style="font-family: 'Rozha One'; font-size: 3rem;">अटूट सात वचन</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="vachan-item"><b>1. अन्न और गृह:</b> घर के भंडार भरे रहें और हम मिलकर गृहस्थी चलाएं।</div>
-                    <div class="vachan-item"><b>2. शक्ति और स्वास्थ्य:</b> सुख-दुःख और बीमारी में एक-दूसरे का संबल बनें।</div>
-                    <div class="vachan-item"><b>3. धर्म और अर्थ:</b> जीवन के हर धार्मिक कार्य और धन उपार्जन में साथी बनें।</div>
-                    <div class="vachan-item"><b>4. सुख और शांति:</b> परिवार के सम्मान और शांति के लिए समर्पित रहें।</div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <div class="vachan-item"><b>5. प्रजापालन:</b> भविष्य की जिम्मेदारियों को मिलकर निभाएं।</div>
-                    <div class="vachan-item"><b>6. ऋतुओं का साथ:</b> हर मौसम और हर परिस्थिति में साथ न छोड़ें।</div>
-                    <div class="vachan-item"><b>7. मित्रता (सखा):</b> हम जन्म-जन्मांतर के लिए सच्चे मित्र बन कर रहें।</div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="shagun-card">
+                    <div class="date-badge">20 FEB 2026</div>
+                    <h4>आशीर्वाद समारोह</h4>
+                    <p class="text-muted">प्रीतिभोज & स्वरुचिभोज</p>
+                    <hr>
+                    <p class="small">स्थान: ग्राम बजरंगखेड़ी, जिला उज्जैन (म.प्र.)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container section-padding mt-5 mb-5" data-aos="fade-up">
-        <h2 class="rasm-header">बिदाई: एक भावुक विदाई</h2>
-        <div class="p-4 bg-white border-radius-15 shadow-sm text-center">
-            <p>"बाबुल का ये घर गोरी, कुछ दिन का ठिकाना है..."</p>
-            <p>आँखों में आंसू और दिल में नई उम्मीदें लेकर जब दुल्हन ने अपने घर की दहलीज पार की। चावल फेंकने की रस्म के साथ घर की सुख-समृद्धि की कामना की गई।</p>
+    <section class="container detail-section">
+        <div class="row align-items:center mb-5" data-aos="fade-right">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1595199833332-630f16373f6b?auto=format&fit=crop&w=800&q=80" class="img-fluid img-rounded" alt="Haldi">
+            </div>
+            <div class="col-md-6 ps-md-5">
+                <h3 style="font-family: 'Rozha One'; color: #CCAC00;">हल्दी की रस्म (उबटन)</h3>
+                <p>विवाह की सबसे जीवंत रस्म! हल्दी सिर्फ सुंदरता के लिए नहीं, बल्कि शुद्धिकरण का प्रतीक है। दूल्हा-दुल्हन को घर की बड़ी-बूढ़ियों ने पारंपरिक 'तेल-बाण' गीतों के साथ हल्दी लगाई।</p>
+                <ul class="text-muted">
+                    <li><b>Deep Note:</b> हल्दी के बाद दूल्हा-दुल्हन का घर से निकलना वर्जित होता है।</li>
+                    <li><b>Music:</b> 'बन्ना-बन्नी' के पारंपरिक लोकगीत।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row align-items:center flex-row-reverse" data-aos="fade-left">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" class="img-fluid img-rounded" alt="Mehendi">
+            </div>
+            <div class="col-md-6 pe-md-5">
+                <h3 style="font-family: 'Rozha One'; color: #228B22;">मेहंदी एवं संगीत</h3>
+                <p>मेहंदी का गहरा रंग पिया के गहरे प्यार की निशानी है। संगीत की रात में उज्जैन के कलाकारों ने समां बाँध दिया, जहाँ परिवार के हर सदस्य ने अपनी डांस परफॉरमेंस दी।</p>
+                <div class="p-3 bg-light border-start border-success border-4">
+                    <i>"मेहंदी रचा दी गोरे हाथों में, सजन का नाम लिखा है यादों में..."</i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5" data-aos="zoom-in">
+        <div class="vachan-container text-center">
+            <h2 class="mb-5" style="font-family: 'Rozha One'; color: var(--golden-glow);">अटूट सात वचन</h2>
+            <div class="row px-4">
+                <div class="col-md-6">
+                    <div class="vachan-pill">1. भोजन और गृहस्थी में सहयोग का वचन।</div>
+                    <div class="vachan-pill">2. मानसिक और शारीरिक शक्ति का संबल बनना।</div>
+                    <div class="vachan-pill">3. धर्म-कर्म और आर्थिक उन्नति में सहभागिता।</div>
+                    <div class="vachan-pill">4. परिवार की मर्यादा और प्रेम का सम्मान।</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="vachan-pill">5. भविष्य की जिम्मेदारियों को मिलकर उठाना।</div>
+                    <div class="vachan-pill">6. हर ऋतु और परिस्थिति में साथ निभाने का प्रण।</div>
+                    <div class="vachan-pill">7. आजीवन अटूट मित्रता और विश्वास का बंधन।</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container detail-section" data-aos="fade-up">
+        <div class="family-grid">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <h5 class="family-title">दर्शनाभिलाषी</h5>
+                    <p>प. बद्रीलाल जी, प. मुकेशसिंह जी,<br>प. हुकमसिंह जी, प. संदीपसिंह जी</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="family-title">स्वागतातुर</h5>
+                    <p>प. तेजकरण जी, प. भगवानसिंह जी,<br>प. जगदीश जी, प. मयंक जी</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="family-title">ननिहाल पक्ष</h5>
+                    <p>नानाजी: प. हाकमसिंह जी<br>मामाजी: प. जसवंतसिंह जी (नलवा)</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="text-danger"><b>विशेष आग्रह:</b> हमारी गाड़ी दि. 19/02/2026 को शाम 4 बजे बजरंगखेड़ी से प्रस्थान करेगी।</p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p> रंजीत (दीपक)चौधरी नजरपुर | © 2026 - डिजिटल विवाह गाथा</p>
-        <p class="small">Made with Devotion & Tech</p>
+        <div class="container">
+            <p>स्नेह निमंत्रण: आप सादर आमंत्रित हैं।</p>
+            <p style="color: var(--golden-glow);">प्रोजेक्ट: पंडित हर्ष शर्मा उज्जैन | © 2026</p>
+            <div class="mt-4 small">
+                Design Focus: Modern UI with Traditional Ujjain Values
+            </div>
+        </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1200 });
+        AOS.init({ duration: 1200, once: true });
     </script>
 </body>
 </html>
