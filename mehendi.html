@@ -1,18 +1,172 @@
-<div class="container py-5">
-    <h1 class="display-3" style="color: #2e7d32;">💚 मेहंदी: प्रेम का अटूट रंग</h1>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेहंदी रस्म | शुभ विवाह</title>
     
-    <div id="mehndiSlider" class="carousel slide my-5 shadow-lg" data-bs-ride="carousel">
-        <div class="carousel-inner rounded-4">
-            <div class="carousel-item active"><img src="m1.jpg" class="d-block w-100" alt="..."></div>
-            <div class="carousel-item"><img src="m2.jpg" class="d-block w-100" alt="..."></div>
-            <div class="carousel-item"><img src="m3.jpg" class="d-block w-100" alt="..."></div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --mehndi-green: #2E7D32;
+            --deep-henna: #1B5E20;
+            --soft-gold: #D4AF37;
+            --bg-light: #F1F8E9;
+        }
+
+        body {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            background-color: var(--bg-light);
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        /* --- Header Styling --- */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--soft-gold);
+            border-bottom: 10px solid var(--mehndi-green);
+        }
+
+        .page-header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4rem, 12vw, 7rem);
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+        }
+
+        /* --- Slider Styling --- */
+        .slider-section {
+            margin-top: -80px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 8px solid white;
+        }
+
+        /* --- Content Layout --- */
+        .detail-card {
+            background: white;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: 50px;
+            border-top: 5px solid var(--mehndi-green);
+        }
+
+        .symbolism-box {
+            background: rgba(46, 125, 50, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 5px solid var(--mehndi-green);
+            margin-top: 30px;
+        }
+
+        .back-nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: var(--mehndi-green);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .back-nav:hover { background: #000; color: var(--soft-gold); }
+
+        .hidden-name-title {
+            color: var(--mehndi-green);
+            font-family: 'Rozha One', serif;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-nav">← मुख्य पृष्ठ</a>
+
+    <div class="page-header" data-aos="fade-down">
+        <h1>मेहंदी की रात</h1>
+    </div>
+
+    <div class="container slider-section" data-aos="zoom-in">
+        <div id="mehndiCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Mehndi Design 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1560714734-73413988636b?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Mehndi Design 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Mehndi Design 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mehndiCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mehndiCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </div>
 
-    <div class="p-5 bg-white shadow-sm rounded-4">
-        <h3>हथेलियों में छुपा 'पिया' का नाम</h3>
-        <p>मेहंदी के बारीक जालों के बीच "राहुल" का नाम खोजना सिर्फ एक खेल नहीं है। यह इस बात का प्रतीक है कि जीवन की उलझनों के बीच भी, जीवनसाथी का साथ हमेशा विद्यमान रहेगा।</p>
-        <p><b>प्रेम का रहस्य:</b> पौराणिक मान्यताओं के अनुसार, मेहंदी का रंग जितना चढ़ता है, पति-पत्नी के बीच का मानसिक तालमेल उतना ही मजबूत होता है।</p>
-    </div>
-</div>
+    <div class="container mb-5">
+        <div class="detail-card" data-aos="fade-up">
+            <h2 class="hidden-name-title">हथेलियों में रची 'पिया' की तकदीर</h2>
+            <p class="lead">मेहंदी का ये गहरा रंग महज सजावट नहीं, बल्कि दो दिलों के अटूट विश्वास की गाथा है। कहते हैं कि मेहंदी की लाली जितनी गहरी चढ़ती है, दांपत्य जीवन में प्रेम की मिठास उतनी ही बढ़ती है।</p>
+            
+            <div class="symbolism-box">
+                <h4>✨ नाम छुपाने का रहस्य</h4>
+                <p>दुल्हन की बारीक मेहंदी के डिज़ाइन में दूल्हे <b>(राहुल)</b> का नाम छुपाना एक प्राचीन परंपरा है। यह इस बात का प्रतीक है कि जीवन की हर उलझन और बारीकियों के बीच, जीवनसाथी का अस्तित्व हमेशा सुरक्षित रहेगा। जब दूल्हा अपनी दुल्हन के हाथों में अपना नाम खोजता है, तो वह क्षण उनके बीच की मानसिक निकटता और अटूट प्रेम को दर्शाता है।</p>
+            </div>
 
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h5 style="color: var(--deep-henna);">शादी की पहली निशानी</h5>
+                    <p>यह रस्म दर्शाती है कि अब दोनों की किस्मत की लकीरें एक होने जा रही हैं। प्राचीन मान्यताओं के अनुसार, मेहंदी का औषधीय गुण दूल्हा-दुल्हन को तनाव से मुक्त रखता है और आने वाले उत्सवों के लिए मानसिक शांति प्रदान करता है।</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 style="color: var(--deep-henna);">गीतों की गूँज</h5>
+                    <p>ढोलक की थाप और पारंपरिक 'बन्ना-बन्नी' के गीतों के बीच रची गई यह मेहंदी आने वाले मंगलमय जीवन की पहली आधिकारिक गवाही है।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5" data-aos="fade-up">
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Mehendi Video" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer class="text-center py-4" style="color: var(--mehndi-green);">
+        <p>॥ प्रेम का रंग, मेहंदी के संग ॥</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
