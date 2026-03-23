@@ -2,79 +2,200 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>The Royal Saga | Rahul & Anjali</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Wedding | Rahul & Anjali</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Tiro+Devanagari+Hindi&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        :root { --gold: #D4AF37; --deep-red: #660000; }
-        body { background: #000; color: #fff; font-family: 'Tiro Devanagari Hindi', serif; }
-        
-        /* Hero Video Background */
+        :root {
+            --gold: #D4AF37;
+            --dark-bg: #0a0a0a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            overflow-x: hidden;
+        }
+
+        /* --- Cinematic Hero --- */
         .hero {
             height: 100vh;
-            display: flex; align-items: center; justify-content: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover; background-attachment: fixed;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
-        
-        .hero-text h1 { font-family: 'Cinzel', serif; font-size: 5.5rem; color: var(--gold); text-shadow: 0 0 30px rgba(212,175,55,0.6); }
-        
-        /* Premium Event Cards */
-        .event-grid { padding: 80px 0; background: radial-gradient(circle, #1a1a1a 0%, #000 100%); }
-        .event-card {
-            height: 400px; border-radius: 30px; border: 1px solid rgba(212,175,55,0.3);
-            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-            transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            display: flex; flex-direction: column; justify-content: flex-end;
-            padding: 30px; text-decoration: none; color: white; overflow: hidden;
-            position: relative; margin-bottom: 30px;
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
-        .event-card:hover { transform: translateY(-20px) scale(1.02); border-color: var(--gold); box-shadow: 0 20px 50px rgba(212,175,55,0.2); }
-        .event-card h3 { font-size: 2.2rem; color: var(--gold); z-index: 2; }
-        .card-num { font-size: 6rem; position: absolute; top: -10px; right: 10px; opacity: 0.1; font-family: 'Cinzel'; }
+
+        /* --- Wedding Chapters Grid --- */
+        .chapter-section {
+            padding: 100px 0;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            letter-spacing: 4px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        .chapter-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 25px;
+            padding: 40px 30px;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .card-num {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 6rem;
+            opacity: 0.1;
+            color: var(--gold);
+            transition: 0.5s;
+        }
+
+        .chapter-card:hover .card-num {
+            opacity: 0.3;
+            transform: scale(1.1);
+        }
+
+        .chapter-card h3 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            z-index: 2;
+        }
+
+        .chapter-card p {
+            color: #ccc;
+            font-size: 1rem;
+            z-index: 2;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+        }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="hero-text text-center" data-aos="zoom-out">
-            <p style="letter-spacing: 10px;">शुभ विवाह</p>
-            <h1>राहुल ❤️ अंजली</h1>
-            <p class="mt-3">२४ दिसंबर २०२६ • उज्जैन की पावन धरा पर</p>
+    <header class="hero">
+        <div data-aos="zoom-out" data-aos-duration="2000">
+            <p style="letter-spacing: 8px; font-size: 1.2rem;">शुभ विवाह</p>
+            <h1>अनुज ❤️ अंजली</h1>
+            <p class="mt-3" style="font-family: 'Montserrat';">२४ दिसंबर २०२६ • उज्जैन</p>
+        </div>
+    </header>
+
+    <section class="chapter-section">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">The Wedding Chapters</h2>
+            
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up">
+                    <a href="ganesh.html" class="chapter-card">
+                        <div class="card-num">01</div>
+                        <h3>गणेश पूजन</h3>
+                        <p>विघ्नहर्ता का प्रथम आमंत्रण और मांगलिक शुरुआत।</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="haldi.html" class="chapter-card">
+                        <div class="card-num">02</div>
+                        <h3>हल्दी उत्सव</h3>
+                        <p>शिप्रा की मिट्टी और स्नेह का उबटन।</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="mehendi.html" class="chapter-card">
+                        <div class="card-num">03</div>
+                        <h3>मेहंदी रात</h3>
+                        <p>हथेलियों पर पिया के नाम की गहरी लाली।</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="mandap.html" class="chapter-card">
+                        <div class="card-num">04</div>
+                        <h3>मण्डप पूजन</h3>
+                        <p>पारिवारिक परंपराएं और भात भरने की रस्म।</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="pratibhoj.html" class="chapter-card">
+                        <div class="card-num">05</div>
+                        <h3>प्रतिभोज</h3>
+                        <p>स्नेहिल मिलन और भव्य स्वरुचि भोज।</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="lagan.html" class="chapter-card">
+                        <div class="card-num">06</div>
+                        <h3>शुभ लग्न</h3>
+                        <p>अटूट सात वचन और अग्नि के सात फेरे।</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="event-grid">
-        <div class="container">
-            <h2 class="text-center mb-5" style="font-family: 'Cinzel'; color: var(--gold);">The Wedding Chapters</h2>
-            <div class="row">
-                <div class="col-md-4" data-aos="fade-up">
-                    <a href="ganesh.html" class="event-card">
-                        <div class="card-num">01</div>
-                        <h3>गणेश पूजन</h3>
-                        <p>विघ्नहर्ता का प्रथम निमंत्रण</p>
-                    </a>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <a href="haldi.html" class="event-card">
-                        <div class="card-num">02</div>
-                        <h3>हल्दी उत्सव</h3>
-                        <p>रंग पीला, स्नेह निराला</p>
-                    </a>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <a href="lagan.html" class="event-card">
-                        <div class="card-num">06</div>
-                        <h3>शुभ लग्न</h3>
-                        <p>अटूट सात वचन और फेरे</p>
-                    </a>
-                </div>
-            </div>
-            </div>
-    </div>
+    <footer>
+        <p>Crafted with Love for the Simhastha 2028 Legacy</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>
