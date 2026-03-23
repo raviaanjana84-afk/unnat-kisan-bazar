@@ -2,45 +2,50 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>श्री गणेश पूजन | विवरण</title>
+    <title>श्री गणेश पूजन | गहराई से विवरण</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background: #fff; font-family: 'Tiro Devanagari Hindi', serif; }
-        .detail-header { background: #800000; color: gold; padding: 60px 0; text-align: center; }
-        .content-box { padding: 50px 20px; }
-        .video-box { background: #000; border-radius: 20px; height: 400px; display: flex; align-items: center; justify-content: center; color: white; }
-        .back-btn { margin-top: 20px; display: inline-block; color: #800000; font-weight: bold; }
+        body { background: #fffcf5; font-family: 'Tiro Devanagari Hindi', serif; }
+        .split-screen { display: flex; height: 100vh; overflow: hidden; }
+        .media-side { flex: 1; background: #000; position: relative; }
+        .content-side { flex: 1; padding: 60px; overflow-y: auto; background: white; border-left: 5px solid #D4AF37; }
+        .back-nav { position: fixed; top: 20px; right: 20px; z-index: 10; background: #800000; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="detail-header">
-        <h1>🕉️ श्री गणेश पूजन</h1>
-        <p>प्रथम पूज्य की आराधना</p>
-    </div>
 
-    <div class="container content-box">
-        <a href="index.html" class="back-btn">← वापस मुख्य पृष्ठ पर</a>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <img src="ganesh_photo.jpg" class="img-fluid rounded shadow" alt="Ganesh Puja">
-                <h3 class="mt-4">रस्म का महत्व</h3>
-                <p>विवाह का निर्विघ्न समापन हो, इसलिए सबसे पहले भगवान गणेश की स्थापना की जाती है। उज्जैन की परंपरा अनुसार, घर के मुख्य द्वार पर 'रिद्धि-सिद्धि' के प्रतीक स्वस्तिक बनाए गए। पंडित जी द्वारा मंत्रोच्चार के साथ गणेश जी को घर में विराजमान किया गया।</p>
+    <a href="index.html" class="back-nav">← मुख्य पृष्ठ</a>
+
+    <div class="split-screen">
+        <div class="media-side">
+            <video width="100%" height="100%" autoplay loop muted style="object-fit: cover;">
+                <source src="your_ganesh_video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="content-side">
+            <h1 style="color: #800000; font-size: 3.5rem;">🕉️ श्री गणेश पूजन</h1>
+            <p class="text-muted">दिनांक: १४ फरवरी २०२६ | फाल्गुन सुदी दशमी</p>
+            <hr>
+
+            <h3>रस्म का आध्यात्मिक महत्व</h3>
+            <p>हिन्दू धर्म में किसी भी मंगल कार्य से पहले <b>"वक्रतुण्ड महाकाय"</b> का आह्वान किया जाता है। विवाह में गणेश पूजन का अर्थ है कि हम बुद्धि और विवेक के देवता को अपने घर आमंत्रित कर रहे हैं ताकि आने वाले दांपत्य जीवन में कोई बाधा (विघ्न) न आए।</p>
+
+            <div class="p-4 mt-4" style="background: #fff8e1; border-radius: 15px;">
+                <h4>गहरी जानकारी (Deep Details)</h4>
+                <ul>
+                    <li><b>कुलदेवता निमंत्रण:</b> सबसे पहले गाँव के मुख्य मंदिर में जाकर कुलदेवता को पीला चावल (अक्षत) देकर आमंत्रित किया गया।</li>
+                    <li><b>स्वस्तिक स्थापना:</b> घर की मुख्य देहरी पर कुमकुम और सिंदूर से स्वस्तिक बनाया गया, जो सुख और समृद्धि का द्वार है।</li>
+                    <li><b>मंगल ध्वनि:</b> शंख की ध्वनि और वैदिक मंत्रों के साथ गणेश जी को घर के 'मडपे' में विराजमान किया गया।</li>
+                </ul>
             </div>
-            <div class="col-md-6">
-                <div class="video-box">
-                    <p>[ यहाँ वीडियो प्ले होगा ]</p>
-                    </div>
-                <div class="mt-4 p-3 border-start border-4 border-danger bg-light">
-                    <h5>विशेष जानकारी (Deep Details)</h5>
-                    <ul>
-                        <li><b>तिथि:</b> फाल्गुन सुदी दशमी</li>
-                        <li><b>विधि:</b> षोडशोपचार पूजन</li>
-                        <li><b>प्रसाद:</b> मोदक एवं पंचामृत</li>
-                    </ul>
-                </div>
+
+            <h3 class="mt-5">स्मृतियाँ (Photos)</h3>
+            <div class="row g-2">
+                <div class="col-6"><img src="photo1.jpg" class="img-fluid rounded shadow-sm"></div>
+                <div class="col-6"><img src="photo2.jpg" class="img-fluid rounded shadow-sm"></div>
             </div>
         </div>
     </div>
 </body>
 </html>
-        
